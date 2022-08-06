@@ -4,13 +4,12 @@ function isPrime(num) {
     }
     else if (num > 1) {
         for (var i = 2; i < num; i++) {
-            if (num % i !== 0) {
-                return true;
-            }
-            else {
+            if (num % i === 0) {
                 return false;
             }
         }
+        return true;
+
 
     }
     else {
@@ -18,7 +17,7 @@ function isPrime(num) {
     }
 }
 
-var myNum = 24;
+var myNum = 15;
 var result = isPrime(myNum);
 if (result === true) {
     console.log(myNum, ' is a Prime number');
@@ -27,9 +26,4 @@ else {
 
     console.log(myNum, ' is Not a Prime number');
 }
-
-
-
-
-
 
